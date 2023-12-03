@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home bg-primary">
+    <div class="container">
+      <kanban-board></kanban-board>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+
+import KanbanBoard from '@/components/kanban/KanbanBoard.vue';
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld,
+  components: { KanbanBoard },
+  mounted() {
+    // eslint-disable-next-line
+    // new Kanban(
+    //   document.querySelector('.kanban'),
+    // );
   },
 };
 </script>
